@@ -1,8 +1,10 @@
-if [ -f .env ]
-then
-  export $(cat .env | sed 's/#.*//g' | xargs)
-  /bin/mysqldump -u$USERNAME -p$PASSWORD --all-databases > $PATH/$WEBSITE.sql
-  cd $PATH
-  /bin/git commit -am "Automatic backup commit"
-  /bin/git push
-fi
+USERNAME=$1
+DATABASE=$2
+PASSWORD=$3
+WEBSITE=$4
+
+mysqldump -u$USERNAME -p$PASSWORD --all-databases > ../$WEBSITE.sql
+cd ../public_html
+git add *
+git commit -m "Automatic backup commit"
+git push
