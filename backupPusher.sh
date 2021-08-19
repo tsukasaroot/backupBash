@@ -7,4 +7,4 @@ mysqldump -u$USERNAME -p$PASSWORD --all-databases > ../$WEBSITE.sql
 cd ../public_html
 git add *
 git commit -m "Automatic backup commit"
-git push
+git push -u origin master
