@@ -9,4 +9,4 @@ git add *
 git commit -m "initial commit"
 git push -u origin master
 
-echo "Installation donetst"
+echo "Installation done"
