@@ -15,5 +15,5 @@ echo "Adding files to commit"
 git add *
 git commit -m "initial commit"
 git push -u origin master
-
+echo
 echo "Installation done"
