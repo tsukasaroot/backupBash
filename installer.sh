@@ -12,9 +12,17 @@ cd ../public_html
 git init
 git config --global core.preloadIndex false
 git remote add origin $1
-echo "Adding files to commit"
+echo
+echo "Adding files to tracking"
+echo
 git add *
+echo
+echo "Commiting added files"
+echo
 git commit -m "initial commit"
+echo
+echo "Pushing commit"
+echo
 git push -u origin master
 echo
 echo "Installation done"
