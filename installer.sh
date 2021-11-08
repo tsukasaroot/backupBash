@@ -1,5 +1,11 @@
 REMOTE=$1
 
+if [ -z $1 ]
+then
+  echo "remote url manquante dans l'argument CLI"
+  return -1
+fi
+
 ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y >/dev/null 2>&1
 echo
 cat ~/.ssh/id_rsa.pub
