@@ -17,6 +17,13 @@ echo
 cd ../public_html
 git init
 git config --global core.preloadIndex false
+git config --global core.packedGitWindowSize 128m
+git config --global core.packedGitLimit 128m
+git config --global pack.deltaCacheSize 128m
+git config --global pack.packSizeLimit 128m
+git config --global pack.windowMemory 128m
+git config --global http.postbuffer 5m
+
 git remote add origin $1
 echo
 echo "Adding files to tracking"
