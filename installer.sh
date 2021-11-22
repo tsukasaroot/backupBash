@@ -38,4 +38,11 @@ echo "Pushing commit"
 echo
 git push -u origin master
 echo
+echo "Installation du script storageChecker..."
+cp storageChecker.sh ..
+echo
+echo "Veuillez créer ce cron manuellement: cd /home/'nom dutilisateur'/www/'nom du site'; storageChecker 'nom du site' >/dev/null 2>&1"
+read -n 1 -s -r -p "Presser n'importe quel bouton pour finaliser l'installation"
+echo
+echo
 echo "Installation done"
