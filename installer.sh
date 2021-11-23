@@ -39,9 +39,9 @@ echo
 git push -u origin master
 echo
 echo "Installation du script storageChecker..."
-cp storageChecker.sh ..
+cp ../backupBash/storageChecker.sh ..
 echo
-echo "Veuillez créer ce cron manuellement: cd /home/'nom dutilisateur'/www/'nom du site'; storageChecker 'nom du site' >/dev/null 2>&1"
+echo "Veuillez créer ce cron manuellement: cd /home/nom_dutilisateur/www/nom_du_site; ./storageChecker nom_du_site >/dev/null 2>&1"
 read -n 1 -s -r -p "Presser n'importe quel bouton pour finaliser l'installation"
 echo
 echo
