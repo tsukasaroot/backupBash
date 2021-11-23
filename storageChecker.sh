@@ -1,7 +1,7 @@
 #!/bin/bash
 
-STORAGE=`du -sh | tr -dc '0-9'`
-GIT=`du -sh public_html/.git | tr -dc '0-9'`
+STORAGE=`du -shm | tr -dc '0-9'`
+GIT=`du -shm public_html/.git | tr -dc '0-9'`
 RESULT=$(($STORAGE-$GIT))
 
 read -r -d '' MERGE << EOM
