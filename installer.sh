@@ -15,6 +15,7 @@ echo
 read -n 1 -s -r -p "Presser n'importe quel bouton si la clé est correctement copié"
 echo
 cd ../public_html
+
 git init
 git config --global core.preloadIndex false
 git config --global core.packedGitWindowSize 128m
@@ -23,6 +24,9 @@ git config --global pack.deltaCacheSize 128m
 git config --global pack.packSizeLimit 128m
 git config --global pack.windowMemory 128m
 git config --global http.postbuffer 5m
+
+touch .gitignore
+echo -e "wp-content/et-cache\n*php_errorlog*\n*wf_logs" > .gitignore
 
 git remote add origin $1
 echo
