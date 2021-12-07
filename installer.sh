@@ -43,7 +43,7 @@ git commit -m "initial commit"
 echo
 echo "Pushing commit"
 echo
-git push -u origin master
+git push -f -u origin master
 echo
 echo "Installation du script storageChecker..."
 cp ../backupBash/storageChecker.sh ..
