@@ -3,7 +3,7 @@ REMOTE=$1
 if [ -z $1 ]
 then
   echo "remote url manquante dans l'argument CLI"
-  return -1
+  exit -1
 fi
 
 if [ ! -f ~/.ssh/id_rsa ]
