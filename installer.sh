@@ -6,8 +6,11 @@ then
   return -1
 fi
 
-ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y >/dev/null 2>&1
-echo
+if [ ! -f ~/.ssh/id_rsa ]
+then
+  ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y >/dev/null 2>&1
+  echo
+fi
 cat ~/.ssh/id_rsa.pub
 echo
 echo "Copier cette clé publique avant de continuer dans https://fructiweb.synology.me:3000/user/settings/ssh"
