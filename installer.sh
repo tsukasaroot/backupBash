@@ -8,7 +8,7 @@ NC='\033[0m'
 
 if [ -z $1 ]
 then
-  echo "${RED}remote url manquante dans l'argument CLI${NC}"
+  echo -e "${RED}remote url manquante dans l'argument CLI${NC}"
   exit -1
 fi
 
@@ -19,7 +19,7 @@ then
 fi
 cat ~/.ssh/id_rsa.pub
 echo
-echo "${YELLOW}Copier cette clé publique avant de continuer dans https://fructiweb.synology.me:3000/user/settings/ssh${NC}"
+echo -e "${YELLOW}Copier cette clé publique avant de continuer dans https://fructiweb.synology.me:3000/user/settings/ssh${NC}"
 echo
 read -n 1 -s -r -p "Presser n'importe quel bouton si la clé est correctement copié"
 echo
@@ -39,24 +39,24 @@ echo -e "wp-content/et-cache\n*php_errorlog*\n*wf_logs" > .gitignore
 
 git remote add origin $1
 echo
-echo "${CYAN}Adding files to tracking${NC}"
+echo -e "${CYAN}Adding files to tracking${NC}"
 echo
 git add *
 echo
-echo "${CYAN}Commiting added files${NC}"
+echo -e "${CYAN}Commiting added files${NC}"
 echo
 git commit -m "initial commit"
 echo
-echo "${CYAN}Pushing commit${NC}"
+echo -e "${CYAN}Pushing commit${NC}"
 echo
 git push -f -u origin master
 echo
-echo "${CYAN}Installation du script storageChecker...${NC}"
+echo -e "${CYAN}Installation du script storageChecker...${NC}"
 cp ../backupBash/storageChecker.sh ..
 echo
-echo "${CYAN}Veuillez créer ce cron manuellement:${NC}"
+echo -e "${CYAN}Veuillez créer ce cron manuellement:${NC}"
 echo "cd /home/nom_dutilisateur/www/nom_du_site; ./storageChecker nom_du_site >/dev/null 2>&1"
 read -n 1 -s -r -p "Presser n'importe quel bouton pour finaliser l'installation"
 echo
 echo
-echo "${GREEN}Installation done${NC}"
+echo -e "${GREEN}Installation done${NC}"
