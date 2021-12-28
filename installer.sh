@@ -55,7 +55,7 @@ echo -e "${CYAN}Installation du script storageChecker...${NC}"
 cp ../backupBash/storageChecker.sh ..
 echo
 echo -e "${CYAN}Veuillez créer ce cron manuellement:${NC}"
-echo "cd /home/nom_dutilisateur/www/nom_du_site; ./storageChecker nom_du_site >/dev/null 2>&1"
+echo "cd /home/nom_dutilisateur/www/nom_du_site; ./storageChecker.sh nom_du_site >/dev/null 2>&1"
 read -n 1 -s -r -p "Presser n'importe quel bouton pour finaliser l'installation"
 echo
 echo
